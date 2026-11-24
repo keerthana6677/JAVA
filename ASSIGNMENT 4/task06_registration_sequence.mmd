@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant Student
+  participant Frame
+  participant Service
+  participant DAO
+  participant MySQL
+  Student->>Frame: Submit registration
+  Frame->>Service: register(...)
+  Service->>Service: validate
+  Service->>DAO: register(...)
+  DAO->>MySQL: PreparedStatement INSERT
+  MySQL-->>DAO: success or unique violation
+  DAO-->>Frame: result
+  Frame-->>Student: confirmation/error

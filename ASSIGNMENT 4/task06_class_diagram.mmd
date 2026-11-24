@@ -1,0 +1,13 @@
+classDiagram
+  Main --> MainDashboard
+  MainDashboard --> StudentRegistrationFrame
+  MainDashboard --> CommitteeLoginFrame
+  CommitteeLoginFrame --> CommitteeDashboard
+  StudentRegistrationFrame --> RegistrationService
+  CommitteeDashboard --> RegistrationService
+  RegistrationService --> ValidationService
+  RegistrationService --> RegistrationDAO
+  RegistrationDAO --> DatabaseConnection
+  RegistrationDAO --> Registration
+  RegistrationDAO --> Event
+  CommitteeDashboard --> CsvExporter

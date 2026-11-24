@@ -1,0 +1,8 @@
+flowchart TD
+  Click[Mouse click] --> Adapter[MouseAdapter.mouseClicked]
+  Adapter --> Store[Add Point to ArrayList]
+  Store --> Counter[Update JLabel]
+  Store --> Repaint[repaint]
+  Repaint --> Paint[paintComponent]
+  Paint --> Super[super.paintComponent]
+  Super --> Dots[Draw all stored points]

@@ -1,0 +1,16 @@
+sequenceDiagram
+  participant Main
+  participant Frame
+  participant Swing
+  Main->>Frame: main()
+  Main->>Swing: invokeLater()
+  Swing->>Frame: constructor()
+  Swing->>Frame: setVisible(true)
+  participant Department
+  Department->>Frame: item/action event
+  Frame->>Frame: refreshDoctors()
+  participant Book
+  Book->>Frame: action event
+  Frame->>Frame: validate/book
+  participant Window
+  Window->>Frame: windowClosing

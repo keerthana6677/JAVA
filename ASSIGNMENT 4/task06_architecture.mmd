@@ -1,0 +1,8 @@
+flowchart TD
+  Presentation[Presentation Swing frames]
+  Service[Service validation and rules]
+  DAO[Data Access RegistrationDAO]
+  DB[(MySQL)]
+  Presentation --> Service
+  Service --> DAO
+  DAO --> DB

@@ -1,0 +1,11 @@
+flowchart TD
+  Start --> Dashboard
+  Dashboard --> Student[Student Registration]
+  Dashboard --> Login[Committee Login]
+  Student --> Validate
+  Validate --> Duplicate[Duplicate Check]
+  Duplicate --> Confirm[Confirmation]
+  Login --> Committee[Committee Dashboard]
+  Committee --> View
+  View --> Filter
+  Filter --> Export
