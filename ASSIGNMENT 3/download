@@ -1,0 +1,7 @@
+*.class
+*.jar
+out/
+bin/
+target/
+Q3/manual-report.txt
+Q3/safe-report.txt
